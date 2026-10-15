@@ -1,0 +1,10 @@
+{
+  "name": "rendiconto",
+  "version": "0.1.0",
+  "description": "Rendiconto.io per Claude Code: importa estratti conto, classifica movimenti, controlla anomalie, prepara il rendiconto, rendiconta i contributi.",
+  "author": { "name": "Agentica", "url": "https://rendiconto.io" },
+  "homepage": "https://rendiconto.io/docs/agenti",
+  "repository": "https://github.com/Agentica-srls/rendiconto-agent-kit",
+  "license": "MIT",
+  "keywords": ["rendiconto", "terzo-settore", "contabilita", "mcp", "ets"]
+}

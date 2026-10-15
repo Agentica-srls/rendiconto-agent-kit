@@ -1,0 +1,269 @@
+{
+  "placeholder": [
+    {
+      "id": "claudeCode",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='rmcp_…'"
+        },
+        {
+          "id": "add",
+          "kind": "shell",
+          "text": "claude mcp add --transport http rendiconto https://rendiconto.io/api/mcp --header \"Authorization: Bearer ${RENDICONTO_TOKEN}\""
+        }
+      ]
+    },
+    {
+      "id": "claudeDesktop",
+      "blocks": [
+        {
+          "id": "config",
+          "kind": "json",
+          "file": "claude_desktop_config.json",
+          "text": "{\n  \"mcpServers\": {\n    \"rendiconto\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"mcp-remote\",\n        \"https://rendiconto.io/api/mcp\",\n        \"--header\",\n        \"Authorization:${AUTH}\"\n      ],\n      \"env\": {\n        \"AUTH\": \"Bearer rmcp_…\"\n      }\n    }\n  }\n}"
+        }
+      ]
+    },
+    {
+      "id": "cursor",
+      "blocks": [
+        {
+          "id": "config",
+          "kind": "json",
+          "file": "~/.cursor/mcp.json",
+          "text": "{\n  \"mcpServers\": {\n    \"rendiconto\": {\n      \"url\": \"https://rendiconto.io/api/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer rmcp_…\"\n      }\n    }\n  }\n}"
+        }
+      ]
+    },
+    {
+      "id": "cli",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='rmcp_…'"
+        },
+        {
+          "id": "setup",
+          "kind": "shell",
+          "text": "npx @rendiconto/cli setup claude"
+        }
+      ]
+    },
+    {
+      "id": "generic",
+      "blocks": [
+        {
+          "id": "url",
+          "kind": "text",
+          "text": "https://rendiconto.io/api/mcp"
+        },
+        {
+          "id": "transport",
+          "kind": "text",
+          "text": "Streamable HTTP"
+        },
+        {
+          "id": "header",
+          "kind": "text",
+          "text": "Authorization: Bearer rmcp_…"
+        }
+      ]
+    },
+    {
+      "id": "http",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='rmcp_…'"
+        },
+        {
+          "id": "whoami",
+          "kind": "shell",
+          "text": "curl -s https://rendiconto.io/api/agent/v1/whoami -H \"Authorization: Bearer ${RENDICONTO_TOKEN}\""
+        }
+      ]
+    }
+  ],
+  "envRef": [
+    {
+      "id": "claudeCode",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='${env:RENDICONTO_TOKEN}'"
+        },
+        {
+          "id": "add",
+          "kind": "shell",
+          "text": "claude mcp add --transport http rendiconto https://rendiconto.io/api/mcp --header \"Authorization: Bearer ${RENDICONTO_TOKEN}\""
+        }
+      ]
+    },
+    {
+      "id": "claudeDesktop",
+      "blocks": [
+        {
+          "id": "config",
+          "kind": "json",
+          "file": "claude_desktop_config.json",
+          "text": "{\n  \"mcpServers\": {\n    \"rendiconto\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"mcp-remote\",\n        \"https://rendiconto.io/api/mcp\",\n        \"--header\",\n        \"Authorization:${AUTH}\"\n      ],\n      \"env\": {\n        \"AUTH\": \"Bearer ${env:RENDICONTO_TOKEN}\"\n      }\n    }\n  }\n}"
+        }
+      ]
+    },
+    {
+      "id": "cursor",
+      "blocks": [
+        {
+          "id": "config",
+          "kind": "json",
+          "file": "~/.cursor/mcp.json",
+          "text": "{\n  \"mcpServers\": {\n    \"rendiconto\": {\n      \"url\": \"https://rendiconto.io/api/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer ${env:RENDICONTO_TOKEN}\"\n      }\n    }\n  }\n}"
+        }
+      ]
+    },
+    {
+      "id": "cli",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='${env:RENDICONTO_TOKEN}'"
+        },
+        {
+          "id": "setup",
+          "kind": "shell",
+          "text": "npx @rendiconto/cli setup claude"
+        }
+      ]
+    },
+    {
+      "id": "generic",
+      "blocks": [
+        {
+          "id": "url",
+          "kind": "text",
+          "text": "https://rendiconto.io/api/mcp"
+        },
+        {
+          "id": "transport",
+          "kind": "text",
+          "text": "Streamable HTTP"
+        },
+        {
+          "id": "header",
+          "kind": "text",
+          "text": "Authorization: Bearer ${env:RENDICONTO_TOKEN}"
+        }
+      ]
+    },
+    {
+      "id": "http",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='${env:RENDICONTO_TOKEN}'"
+        },
+        {
+          "id": "whoami",
+          "kind": "shell",
+          "text": "curl -s https://rendiconto.io/api/agent/v1/whoami -H \"Authorization: Bearer ${RENDICONTO_TOKEN}\""
+        }
+      ]
+    }
+  ],
+  "custom": [
+    {
+      "id": "claudeCode",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='rmcp_…'"
+        },
+        {
+          "id": "add",
+          "kind": "shell",
+          "text": "claude mcp add --transport http rendiconto http://localhost:3300/api/mcp --header \"Authorization: Bearer ${RENDICONTO_TOKEN}\""
+        }
+      ]
+    },
+    {
+      "id": "claudeDesktop",
+      "blocks": [
+        {
+          "id": "config",
+          "kind": "json",
+          "file": "claude_desktop_config.json",
+          "text": "{\n  \"mcpServers\": {\n    \"rendiconto\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"mcp-remote\",\n        \"http://localhost:3300/api/mcp\",\n        \"--header\",\n        \"Authorization:${AUTH}\"\n      ],\n      \"env\": {\n        \"AUTH\": \"Bearer rmcp_…\"\n      }\n    }\n  }\n}"
+        }
+      ]
+    },
+    {
+      "id": "cursor",
+      "blocks": [
+        {
+          "id": "config",
+          "kind": "json",
+          "file": "~/.cursor/mcp.json",
+          "text": "{\n  \"mcpServers\": {\n    \"rendiconto\": {\n      \"url\": \"http://localhost:3300/api/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer rmcp_…\"\n      }\n    }\n  }\n}"
+        }
+      ]
+    },
+    {
+      "id": "cli",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='rmcp_…'"
+        },
+        {
+          "id": "setup",
+          "kind": "shell",
+          "text": "npx @rendiconto/cli setup claude"
+        }
+      ]
+    },
+    {
+      "id": "generic",
+      "blocks": [
+        {
+          "id": "url",
+          "kind": "text",
+          "text": "http://localhost:3300/api/mcp"
+        },
+        {
+          "id": "transport",
+          "kind": "text",
+          "text": "Streamable HTTP"
+        },
+        {
+          "id": "header",
+          "kind": "text",
+          "text": "Authorization: Bearer rmcp_…"
+        }
+      ]
+    },
+    {
+      "id": "http",
+      "blocks": [
+        {
+          "id": "env",
+          "kind": "shell",
+          "text": "export RENDICONTO_TOKEN='rmcp_…'"
+        },
+        {
+          "id": "whoami",
+          "kind": "shell",
+          "text": "curl -s http://localhost:3300/api/agent/v1/whoami -H \"Authorization: Bearer ${RENDICONTO_TOKEN}\""
+        }
+      ]
+    }
+  ]
+}

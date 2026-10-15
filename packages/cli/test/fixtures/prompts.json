@@ -1,0 +1,63 @@
+{
+  "source": "Rendiconto/src/mcp/prompts.ts @ 83e0cbcd",
+  "prompts": {
+    "importa-estratto-conto": [
+      "get_workspace_info",
+      "list_bank_accounts",
+      "create_upload_link",
+      "import_statement_preview",
+      "import_statement_confirm"
+    ],
+    "classifica-movimenti": [
+      "list_unclassified_movements",
+      "list_classification_rules",
+      "suggest_classification",
+      "bulk_classify_movements",
+      "create_classification_rule"
+    ],
+    "controlla-anomalie": [
+      "get_review_queue",
+      "list_anomalies",
+      "list_movement_warnings",
+      "classify_movement",
+      "dismiss_anomaly",
+      "add_comment"
+    ],
+    "prepara-rendiconto-fine-anno": [
+      "get_year_end_checklist",
+      "get_modello_d",
+      "get_relazione_sections",
+      "update_relazione_section",
+      "export_modello_d",
+      "export_analisi"
+    ],
+    "rendiconta-contributo": [
+      "list_contributi",
+      "get_contributo_rendicontazione",
+      "allocate_to_contributo",
+      "export_contributo_bundle"
+    ],
+    "analisi-centri-di-costo": [
+      "get_analisi",
+      "get_cost_center_completeness",
+      "bulk_assign_cost_center",
+      "export_analisi"
+    ],
+    "scadenze-del-mese": [
+      "list_scadenze",
+      "complete_scadenza"
+    ],
+    "rimborsi-volontari": [
+      "upload_document",
+      "scan_receipt",
+      "create_rimborso",
+      "export_rimborso_declaration"
+    ],
+    "verifica-quadratura-bilancio": [
+      "check_quadratura",
+      "validate_period_close",
+      "reconcile_status",
+      "get_salute"
+    ]
+  }
+}

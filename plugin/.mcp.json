@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "rendiconto": {
+      "type": "http",
+      "url": "${RENDICONTO_BASE_URL:-https://rendiconto.io}/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${RENDICONTO_TOKEN}"
+      }
+    }
+  }
+}

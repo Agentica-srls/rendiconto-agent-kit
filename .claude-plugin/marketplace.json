@@ -1,0 +1,15 @@
+{
+  "name": "rendiconto-agent-kit",
+  "owner": { "name": "Agentica", "url": "https://rendiconto.io" },
+  "metadata": { "description": "Plugin Claude Code per Rendiconto.io" },
+  "plugins": [
+    {
+      "name": "rendiconto",
+      "source": "./plugin",
+      "description": "Importa estratti conto, classifica movimenti, controlla anomalie, prepara il rendiconto e rendiconta i contributi con Rendiconto.io.",
+      "version": "0.1.0",
+      "category": "productivity",
+      "keywords": ["rendiconto", "terzo-settore", "mcp"]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@rendiconto/cli",
+  "version": "0.1.0",
+  "description": "CLI and SDK for the Rendiconto.io agent platform (MCP + REST)",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "bin": { "rendiconto": "dist/bin.js" },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }
+  },
+  "files": ["dist", "README.md"],
+  "repository": { "type": "git", "url": "git+https://github.com/Agentica-srls/rendiconto-agent-kit.git", "directory": "packages/cli" },
+  "publishConfig": { "access": "public", "provenance": true },
+  "scripts": {
+    "gen": "node scripts/gen-tools.mjs",
+    "prebuild": "node scripts/gen-tools.mjs --if-missing",
+    "build": "tsc -p tsconfig.build.json && node scripts/postbuild.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "json-schema-to-typescript": "^15.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}
